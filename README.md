@@ -31,4 +31,8 @@ Version 0.0.2 - Casper now has a Currency converter
 
 -*-*- 
 
-Version 0.0.3 - This version is currently being worked on 
+Version 0.0.3 - Added support to change the programs name and more currencies 
+
+-*-*- 
+
+Version 0.0.4 - This version is being worked on 
