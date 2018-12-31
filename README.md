@@ -31,7 +31,7 @@ Version 0.0.2 - Casper now has a Currency converter
 
 -*-*- 
 
-Version 0.0.3 - Added support to change the programs name and more currencies 
+Version 0.0.3 - Added support to change the programs name and more currencies along with a Bash file to from from file 
 
 -*-*- 
 
