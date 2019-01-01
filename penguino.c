@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <string.h> 
 
-char *c_name = "Casper"; 
-char new_c_name[90]; 
-
 struct sys_var
 {
 
@@ -118,7 +115,7 @@ int currency(void)
     else 
     {
 
-        printf("Exiting...\n"); 
+        printf("\nExiting...\n"); 
         return (0); 
 
     }
@@ -191,31 +188,41 @@ int main(void)
     struct sys_var var = {"Calculator, Currency converter, or Exit"};  
 
     char change; 
+    char c_name[10] = "Casper"; 
 
-    int size; 
+    int size = size + 1;  
+    int size_name_c = size_name_c + 1; 
 
     printf("Hello\n\n"); 
     printf("How many characters are in your name: "); 
     scanf("%d", &size); 
+
+    while (getchar() != '\n') {}
 
     char *name = (char *) malloc(sizeof(char) * size); 
     
     printf("\nPlease enter your name: "); 
     fgets(name, size, stdin); 
 
-    printf("\nHello %s!\n", name); 
+    printf("\nHello %s\n", name); 
     printf("\nMy name is %s I am this program\n", c_name); 
-    
     printf("\nWould you like to change my name enter (y) or (n): ");
     scanf(" %c", &change);
 
     if (change == 'y')
     {
-
+        
+        printf("\nHow many characters is my new name: "); 
+        scanf(" %d", &size_name_c); 
+        
         printf("\nPlease select a new name: ");
-        scanf(" %[^\n]s", new_c_name); 
-        c_name = new_c_name; 
-        printf("\nNew name selected: %s", new_c_name);
+
+        while (getchar() != '\n') {} 
+
+        char *new_c_name = (char *) malloc(sizeof(char) * size_name_c); 
+
+        fgets(new_c_name, size_name_c, stdin); 
+        printf("\nNew name selected: %s\n", new_c_name);
 
     } 
 
@@ -226,7 +233,7 @@ int main(void)
 
     }
     
-    printf("\n\nSelect one of the menus please (%s)?", var.menus); 
+    printf("\nSelect one of the menus please (%s)?", var.menus); 
     printf("\n\nEnter the name of the menu or enter anything to exit: ");  
     scanf(" %[^\n]s", var.menu); 
 
