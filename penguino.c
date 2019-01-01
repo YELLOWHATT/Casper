@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h> 
- 
+
 char *c_name = "Casper"; 
 char new_c_name[90]; 
 
@@ -9,7 +10,6 @@ struct sys_var
 
     char menus[70];
     char menu[90];
-    char name[90]; 
 
 };
 
@@ -38,7 +38,7 @@ int currency(void)
     struct currency_var current = {"1 - Euro, 2 - Pound, 3 - Yen, 4 - Swiss Franc, or 5 - Russian Ruble"};
 
     printf("**********************************\n");
-    printf("Welcome to the currency converter\n");
+    printf("Welcome to the Currency converter\n");
     printf("**********************************\n");
     printf("\nPlease enter List or Exit to continue: "); 
     scanf("%s", current.list_exit);
@@ -187,16 +187,23 @@ int calculator(void)
 
 int main(void)
 { 
+    
+    struct sys_var var = {"Calculator, Currency converter, or Exit"};  
 
     char change; 
 
-    struct sys_var var = {"Calculator, Currency converter, or Exit"};  
+    int size; 
 
     printf("Hello\n\n"); 
-    printf("What is your name? (MAX NAME LIMIT : 90 char)\n\n"); 
-    scanf("%[^\n]s", var.name); 
+    printf("How many characters are in your name: "); 
+    scanf("%d", &size); 
+
+    char *name = (char *) malloc(sizeof(char) * size); 
     
-    printf("\nHello %s!!!\n", var.name); 
+    printf("\nPlease enter your name: "); 
+    fgets(name, size, stdin); 
+
+    printf("\nHello %s!\n", name); 
     printf("\nMy name is %s I am this program\n", c_name); 
     
     printf("\nWould you like to change my name enter (y) or (n): ");
@@ -215,7 +222,7 @@ int main(void)
     else 
     {
 
-        printf("\nSince you have not chosen (y) it will stay %s", c_name); 
+        printf("\nSince you have not chosen (y) my name will stay %s", c_name); 
 
     }
     
@@ -226,7 +233,7 @@ int main(void)
     if (strcmp(var.menu, "Calculator") == 0)
     {
     
-        printf("\nGoing to Calculator");
+        printf("\nGoing to the Calculator");
         printf("\033c"); 
         calculator(); 
 
@@ -235,7 +242,7 @@ int main(void)
     else if (strcmp(var.menu, "Currency converter") == 0)
     {
 
-        printf("\nGoing to the Currency Converter");
+        printf("\nGoing to the Currency converter");
         printf("\033c"); 
         currency(); 
 
