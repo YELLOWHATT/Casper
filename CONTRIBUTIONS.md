@@ -12,7 +12,7 @@ something. Though we only have 3 rules for contributing.
 - (3) have recorded in written form at the time of this document's publication their desire to have their submission(s) 
 make them designated and be recognized as a contributor. 
 
-If you need any help please visit the [README.md](https://github.com/YELLOWHATT/Comet/blob/master/README.md)
+If you need any help please visit the [README.md](https://github.com/YELLOWHATT/Casper/blob/master/README.md)
 
 Or email this email: thekoolaidmannn@gmail.com 
 
