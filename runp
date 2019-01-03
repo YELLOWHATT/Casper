@@ -1,3 +1,5 @@
 #!/bin/bash 
 
+# This is to run penguino.c directly from file 
+
 ./penguino
