@@ -20,10 +20,9 @@ struct currency_var
 };
 
 int currency(void)
-{ 
+{
 
     // Current value of all currencies to 1 United States Dollar 
-
     const double euro_value = 0.87;
     const double pound_value = 0.79; 
     const double yen_value = 110.79; 
@@ -207,7 +206,9 @@ int main(void)
     printf("\nHello %s\n", name); 
     printf("\nMy name is %s I am this program\n", c_name); 
     printf("\nWould you like to change my name enter (y) or (n): ");
-    scanf(" %c", &change);
+    scanf(" %c", &change); 
+
+    free(name); 
 
     if (change == 'y')
     {
@@ -224,6 +225,8 @@ int main(void)
         fgets(new_c_name, size_name_c, stdin); 
         printf("\nNew name selected: %s\n", new_c_name);
 
+        free(new_c_name); 
+
     } 
 
     else 
@@ -231,8 +234,8 @@ int main(void)
 
         printf("\nSince you have not chosen (y) my name will stay %s", c_name); 
 
-    }
-    
+    } 
+
     printf("\nSelect one of the menus please (%s)?", var.menus); 
     printf("\n\nEnter the name of the menu or enter anything to exit: ");  
     scanf(" %[^\n]s", var.menu); 
