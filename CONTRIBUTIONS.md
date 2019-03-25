@@ -1,6 +1,6 @@
 # Contributions 
 
-Lets make this simple if you want to contribute welcome to Darwin. This project was made for people to pitch in and make it 
+Lets make this simple if you want to contribute welcome to Casper. This project was made for people to pitch in and make it 
 something. Though we only have 3 rules for contributing. 
 
 "contributors" is defined as all persons who satisfy the following criteria:
